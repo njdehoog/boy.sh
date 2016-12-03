@@ -23,6 +23,7 @@ url: "https://www.boy.sh" # the base hostname & protocol for your site, e.g. htt
 twitter_username: boyvanamstel 
 github_username: boyvanamstel 
 google_analytics: UA-7720147-29
+lang: "en"
 
 # Build settings
 markdown: kramdown
