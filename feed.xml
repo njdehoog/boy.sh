@@ -1,0 +1,26 @@
+---
+---
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <generator uri="http://spelt.io">Spelt</generator>
+  <title>{{ site.title | xml_escape }}</title>
+  <subtitle>{{ site.description }}</subtitle>    
+
+  <link href="{{ site.url }}/feed.xml" rel="self" />
+  <link href="{{ site.url }}" rel="alternate" type="text/html" />
+  <updated>{{ site.time | date_to_rfc822 }}</updated>
+  <id>https://www.boy.sh//</id>
+
+  {% for post in posts %}
+  <entry>
+    <title>{{ post.title | xml_escape }}</title>
+    <link href="{{ site.url }}{{ post.url }}"/>
+    <id>{{ site.url }}{{ post.url }}</id>
+    <updated>{{ post.date | date_to_rfc822 }}</updated>
+    <summary>{{ post.excerpt | xml_escape }}</summary>
+  </entry>
+  {% endfor %}
+
+  
+
+</feed>
